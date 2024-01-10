@@ -1,0 +1,25 @@
+html
+    head
+        title Workshop
+        link(rel="stylesheet" type="text/css" href="/styles.css")
+    body
+        include ../views/header
+        h6 Workshop Info:
+        div#left(class = "column left")
+            h1 Amount of enroll: #{workshop.students.length}
+            br
+            div.button1
+                button#update(type = "button" onclick="enroll()") Enroll
+        div#middle(class = "column middle")
+            div.stats
+                h3 Workshop Name: #{workshop.name}
+                h1 Artist: #{workshop.artist}
+                h1 Minimum age: #{workshop.age}
+                h1 Cost: #{workshop.cost}
+                h1 Description: #{workshop.Description}    
+        div#right(class = "column right")
+            h3 Enrolled: 
+            each student in workshop.students 
+                h1 #{student.name}
+        script(src="/workshop.js")
+

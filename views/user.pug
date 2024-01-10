@@ -1,0 +1,67 @@
+html
+    head
+        title User
+        link(rel="stylesheet" type="text/css" href="/styles.css")
+    body
+        include ../views/header
+        h6 User Info:
+        div#left(class = "column left")
+            if artists.length != 0
+                h3 Followed Artist:
+                each artist in artists
+                    h1 Artist name: #{artist.name}
+                    br
+                    div.button1
+                        button#update(type = "button" onclick=`unfollow('${artist._id}')`) unfollow
+                    if artist.notification.length === 0
+                        h1 Notification: Nothing    
+                    else 
+                        h1 Notification:
+                    each update in artist.notification
+                        div.addItem
+                            h1 Type: #{update.type}
+                            div.link
+                                if update.type == "art"
+                                    a(href=`/gallery/${update.id}`)  Art 
+                                else
+                                    a(href=`/workshop/${update.id}`)  Workshop 
+                                br
+            else
+                Followed Artist:
+        div#middle(class = "column middle")
+            div.stats
+                h3 User name: #{user.username}
+                h3 Account type: #{user.type}
+            h3 Likes:
+                each like in likes
+                    div.changeInfo
+                        h5  To: #{like.title}
+                        div.button1
+                            button#remove(type = "button" onclick=`unlike('${like._id}')`) remove like
+                    br
+                    br
+            div#reviews
+                h3 Reviews:
+                each review in reviews
+                    div.review
+                        h5  By: #{review.from}
+                        h4  Content: #{review.content}
+                        div.button1
+                            button#remove(type = "button" onclick=`remove('${review._id}')`) remove
+                    br
+                    br
+        div#right(class = "column right")
+            if user.type === "artist"
+                div.links
+                    a(href="/addWorkshop") Add Workshop
+                    br
+                    a(href="/addArt") Add Artwork
+                br
+                br
+            div.button1
+                    button#update(type = "button" onclick="logout()") Logout
+            div.products
+                h3 Change Account Type
+                div.button1
+                    button#update(type = "button" onclick="change()") Change
+        script(src="/user.js")

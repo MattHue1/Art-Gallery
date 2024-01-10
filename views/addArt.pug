@@ -1,0 +1,41 @@
+html
+    head
+        title Add Art 
+        link(rel="stylesheet" type="text/css" href="/styles.css")
+    body
+        include ../views/header
+        div#left(class = "column left")
+            h3 Art Data:
+            div.stats
+                h1 Title: 
+                |
+                input#title(type='text', name='title')
+                h1 Year: 
+                |
+                input#year(type='text', name='year')
+                h1 Category: 
+                |
+                input#category(type='text', name='category')
+                h1 Medium: 
+                |
+                input#medium(type='text', name='medium')
+                h1 Description: 
+                |
+                input#description(type='text', name='description')
+                h1 Poster: 
+                |
+                input#poster(type='text', name='poster')
+                br
+                div.button1
+                    button#update(type = "button" onclick="displayArt()") Display
+        div#middle(class = "column middle")
+            h3 Display Result
+            div#result
+        div#right(class = "column right")
+            div.stats
+                h3 Submit:
+                br
+                div.button1
+                    button#update(type = "button" onclick="submit()") Submit Art
+        script(src="/addArt.js")
+

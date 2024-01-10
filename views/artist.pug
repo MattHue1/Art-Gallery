@@ -1,0 +1,42 @@
+html
+    head
+        title Artist
+        link(rel="stylesheet" type="text/css" href="/styles.css")
+    body
+        include ../views/header
+        h6 Artist Info:
+        div#left(class = "column left")
+            h3 Artist's Workshop 
+            each workshop in workshops 
+                div.addItem
+                    h3 Workshop Name: #{workshop.name}
+                    h1 Description: #{workshop.description}
+                    h1 Amount of enrolled students: #{workshop.students.length}
+                    div.cart
+                        div.link
+                            a.button(href=`/workshop/${workshop._id}`)
+                                | More info
+                br
+                br
+
+        div#middle(class = "column middle")
+            div.stats
+                h3 Artist name: #{artist.name}
+            div#reviews
+                h3 Art Works:
+                each art in arts
+                    div.review
+                        h3 Title: #{art.Title}
+                        a(href = `/gallery/${art._id}`)
+                            img(src= art.Poster, alt='Art Work', width = 500 vw, position: "absoulte")
+                    br
+                    br
+        div#right(class = "column right")
+            div.products
+                h3 Follow artist:
+                br
+                br
+                div.button1
+                    button#update(type = "button" onclick="follow()") Follow
+        script(src="/artist.js")
+

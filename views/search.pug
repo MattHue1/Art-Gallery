@@ -1,0 +1,55 @@
+html
+    head
+        title Search 
+        link(rel="stylesheet" type="text/css" href="/styles.css")
+    body
+        include ../views/header
+        div#left(class = "column left")
+            h3 Art Search:
+            div.stats
+                h1 Title: 
+                |
+                input#title(type='text', name='title')
+                h1 Artist Name: 
+                |
+                input#artist(type='text', name='artist')
+                h1 Category: 
+                |
+                input#category(type='text', name='category')
+                h1 Medium: 
+                |
+                input#medium(type='text', name='medium')
+                br
+                div.button1
+                    button#update(type = "button" onclick="searchArt(0)") Search
+            div.products
+                h3 Medium :
+                each medium in mediums 
+                    h5 #{medium}
+            div.products
+                h3 Category :
+                each category in categories 
+                    h4 #{category}
+        div#middle(class = "column middle")
+            h3 Search Result
+            div#result
+        div#right(class = "column right")
+            h3 Workshop Search:
+            div.stats
+                h1 Workshop Name: 
+                |
+                input#name(type='text', name='name')  
+                h1 Artist Name: 
+                |
+                input#artistW(type='text', name='artistW')
+                h1 Minimum Age: 
+                |
+                input#age(type='text', name='age')
+                h1 Minimum cost: 
+                |
+                input#cost(type='text', name='cost')  
+                br
+                div.button1
+                    button#update(type = "button" onclick="searchWorkshop(0)") Search
+        script(src="/search.js")
+

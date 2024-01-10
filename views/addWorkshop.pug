@@ -1,0 +1,31 @@
+html
+    head
+        title Add work shop 
+        link(rel="stylesheet" type="text/css" href="/styles.css")
+    body
+        include ../views/header
+        div#left(class = "column left")
+            h3 Workshop Data:
+        div#middle(class = "column middle")
+            div.stats
+                h1 Workshop Name: 
+                |
+                input#name(type='text', name='name')
+                h1 Minimum age: 
+                |
+                input#age(type='text', name='age')
+                h1 Cost: 
+                |
+                input#cost(type='text', name='cost')
+                h1 Description: 
+                |
+                input#description(type='text', name='description')
+                div#formErrors
+        div#right(class = "column right")
+            div.stats
+                h3 Submit:
+                br
+                div.button1
+                    button#update(type = "button" onclick="add()") Add Workshopt
+        script(src="/addWorkshop.js")
+

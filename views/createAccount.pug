@@ -1,0 +1,20 @@
+html
+    head
+        title Create Account
+        link(rel="stylesheet" type="text/css" href="/styles.css")
+    body
+        include ../views/header
+        h6 Create Your Account:
+        div#middle(class = "column middle")
+            div.stats
+                h1 Username: 
+                |
+                input#user(type='text', name='user')
+                h1 Password: 
+                |
+                input#pass(type='text', name='pass')
+                br
+                div.button1
+                    button#delete(type = "button" onclick="newAcc()") Create new account                
+                div#formErrors 
+        script(src="/createAccount.js")

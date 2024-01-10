@@ -1,0 +1,12 @@
+html
+    head
+        title Artist List
+        link(rel="stylesheet" type="text/css" href="/styles.css")
+    body
+        include ../views/header
+        h6 List of Artist:
+        div.links
+            each artist in artists
+                a(href=`/artists/${artist._id}`) #{artist.name}
+                br
+                br

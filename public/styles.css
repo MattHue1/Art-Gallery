@@ -1,0 +1,319 @@
+body {
+    background: rgb(0, 0, 0);
+}
+.main{
+    text-align: center;
+    padding-bottom: 13vw;
+    width: 100%;
+}
+.link{
+    font-family: Verdana;
+    font-size: 2vw;
+}
+.stats{
+    border: 3px outset rgb(69, 68, 68);
+    background-color: rgb(0, 0, 168);
+    padding: 2.5vw;
+    text-align: center;
+    border-radius: 50% / 10%;
+    width: calc(100% - 4em);
+    width: 65%;
+    position: relative;
+    left: 10%;
+}
+select {
+    position: relative;
+    font-size: x-large;    
+    
+}
+.column {
+    float: left;
+}
+.left {
+    left: 0%;
+    width: 25%;
+    text-align: left;
+}
+.middle {
+    position: relative;
+    left: 0%;
+    width: 50%;
+    text-align: left;
+}
+.right {
+    position: relative;
+    left: 0%;
+    text-align: left;
+}
+.btnLink{
+    margin: 1vw;
+    text-decoration: none;
+    padding: 0.5rem;
+    font-size: 2.5vw;
+    border: 1px solid #333333;
+    background-color: #ab3030;
+
+}
+.links{
+    position: relative;
+    text-align: center;
+    font-family: Verdana;
+    font-size: 35px;
+}
+
+.btnLink2{
+    margin: 5vw;
+    text-decoration: none;
+    padding: 3.5vw;
+    font-size: 9vw;
+    border: 1px solid #333333;
+    background-color: #e2df13;
+
+}
+h{
+    font-size: 3.2vw;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    font-weight: 700;
+}
+p.double {
+    outline-style: double;
+    width: 150px;
+    
+}
+
+
+/*text style for title of bookmark*/
+h1{
+    font-size: 1.5vw;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: left;
+}
+
+/*text style for product on stock*/
+h2{
+    font-size: 1.5vw;
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+    text-align: left;
+}
+
+/*text style for title of cart*/
+h3{
+    font-size: 2.2vw;
+    font-family: fantasy;
+    color: rgb(255, 255, 255);
+    text-align: left;
+}
+
+/*text style for cost in cart*/
+h4{
+    font-size: 1.2vw;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    text-align: left;
+}
+
+/*text style for message for minimum order needed*/
+h5{
+    font-size: 1.2vw;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    text-align: left;
+}
+
+/*text style for name of page*/
+h6{
+    font-size: 5vw;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin: 20px;
+}
+
+/*text style for description of page*/
+h7{
+    font-size: 2.2vw;
+    font-family: cursive;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    padding-left: 20px;
+}
+
+/*text style for button, bookmarks*/
+p{
+    font-size: 1.2vw;
+}
+
+a {
+      color: #ffffff; /* Change this to your desired color */
+      text-decoration: none; /* Remove underline */
+      text-align: left;
+    }
+
+    /* Define a style for visited links */
+    a:visited {
+      color: rgb(229, 240, 33); /* Change this to your desired color for visited links */
+    }
+
+    /* Define a style for hover effect on links */
+    a:hover {
+      color: #ff4500; /* Change this to your desired color for hover effect */
+    }
+
+    /* Define a style for active links (when clicked) */
+    a:active {
+      color: #dc143c; /* Change this to your desired color for active links */
+    }
+
+.review{
+    border: 3px outset rgb(69, 68, 68);
+    background-color: rgb(140, 0, 168);
+    padding: 1.5vw;
+    text-align: left;
+    position: relative;
+}
+
+/*The box around the store product*/
+.products{
+    border: 3px outset rgb(69, 68, 68);
+    background-color: rgb(0, 0, 168);
+    padding-left: 1.5vw;
+    padding-top: 2.5vw;
+    padding-bottom: 2.5vw;
+    text-align: left;
+    border-radius: 50% / 10%;
+    width: calc(100% - 4em);
+    position: relative;
+}
+
+/*The box around the bookmarks*/
+.bookmark{
+    border: 5px outset rgb(117, 23, 23);
+    background-color: rgb(224, 179, 242);
+    padding: 3.5vw;
+    text-align: left;
+    margin-left: 3%;
+    margin-top:2%;
+    position:relative;
+    border-radius: 50% / 70%;
+    width: calc(100% - 1);
+}
+
+/*The box around the bookmarks*/
+.addItem{
+    border: 5px outset rgb(117, 23, 23);
+    background-color: rgb(0, 225, 255);
+    padding:3vw;
+    padding-right: 5vw;
+    text-align: left;
+    margin-left: 3%;
+    position:relative;
+    width: 10vw;
+}
+
+/*The box around the bookmarks*/
+.changeInfo{
+    border: 5px outset rgb(117, 23, 23);
+    background-color: rgb(0, 255, 13);
+    padding:3vw;
+    text-align: left;
+    width: 5vw;
+    margin-left: 3vw;
+    position:relative;
+}
+
+.addCat{
+    border: 5px outset rgb(117, 23, 23);
+    background-color: rgb(255, 0, 0);
+    padding:3vw;
+    text-align: left;
+    margin-left: 3%;
+    margin-top:3.5vw;
+    position:absolute;
+    width: 15vw;
+}
+.h1{
+    font-size: 1.5vw; width:13vw;
+}
+
+input {
+    width: 9vw;
+    height: 1.5vw;
+}
+
+
+/*The box around the cart*/
+.cart{
+    text-size-adjust: 50px;
+    border: 5px outset rgb(0, 0, 0);
+    background-color: rgb(158, 17, 17);
+    padding: 15%;
+    text-align: left;
+    margin-right: 3%;
+    border-radius: 20%;
+    width: calc(100% - 2em);
+}
+
+/*The add and remove button*/
+button {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
+
+/*The submit order button*/
+.button1{
+    background-color: #ff0000; 
+    border: none;
+    color: white;
+    padding: 2px 5px;
+    text-align: center;
+    text-decoration: aqua;
+    display: inline-block;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 12px;
+    align-content: right;
+}
+
+/*The add item button*/
+.button2{
+    background-color: #d9ff00; 
+    border: none;
+    color: white;
+    padding: 2px 5px;
+    text-align: center;
+    text-decoration: aqua;
+    margin-left: 93vw;
+    margin-top: 1vw;
+    display: inline-block;
+    font-size: 15vw;
+    border: .2vw solid black;
+    border-radius: 12vw;
+    align-content: right;
+    position: fixed;
+}
+
+.button2:hover {
+    background-color: #3e30ab; 
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: white;
+}
+
+/*The effect for the submit order button*/
+.button1:hover {
+    background-color: #32ab30; 
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: white;
+}
+
+input.error  {
+    border: 2px solid red;
+ }
+
+
+

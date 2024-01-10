@@ -1,0 +1,12 @@
+html
+    head
+        title Art Work List
+        link(rel="stylesheet" type="text/css" href="/styles.css")
+    body
+        include ../views/header
+        h6 List of Art:
+        div.links
+            each art in arts
+                a(href=`/gallery/${art._id}`) #{art.Title}
+                br
+                br

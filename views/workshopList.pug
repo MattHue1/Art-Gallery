@@ -1,0 +1,12 @@
+html
+    head
+        title Workshop List
+        link(rel="stylesheet" type="text/css" href="/styles.css")
+    body
+        include ../views/header
+        h6 List of Workshop:
+        div.links
+            each workshop in workshops
+                a(href=`/workshop/${workshop._id}`) #{workshop.name}
+                br
+                br

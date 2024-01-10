@@ -1,0 +1,42 @@
+html
+    head
+        title Art Work 
+        link(rel="stylesheet" type="text/css" href="/styles.css")
+    body
+        include ../views/header
+        h6 Item Info:
+        div#left(class = "column left")
+            img(src= art.Poster, alt='Art Work', width = 500 vw, height = 500 vw; position: "absolute")
+            h1 Amount of Likes: #{like}
+            br
+            div.button1
+                button#update(type = "button" onclick="like()") like
+        div#middle(class = "column middle")
+            div.stats
+                h3 Title: #{art.Title}
+                h1 Artist: 
+                a(href=`/artists/${artist}`)  #{art.Artist}
+                h1 Year Created: #{art.Year}
+                h1 Category: #{art.Category}
+                h1 Medium: #{art.Medium}
+                h1 Description: #{art.Description}    
+            div#reviews
+                h3 Reviews:
+                each review in reviews
+                    div.review
+                        h5  By: #{review.from}
+                        h4  Content: #{review.content}
+                    br
+                    br
+        div#right(class = "column right")
+            div.products
+                h3 Write Review:
+                h1 Content: 
+                |
+                input#review(type='text', name='review')
+                br
+                br
+                div.button1
+                    button#update(type = "button" onclick="submit()") Submit review
+        script(src="/art.js")
+
